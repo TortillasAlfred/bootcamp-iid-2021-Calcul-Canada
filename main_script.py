@@ -122,6 +122,7 @@ def pytorch_train(pytorch_network,
         logger.writerow(["Epoch", "Train Loss", "Valid Loss"])
 
     print(f"Logging will be done to path '{logging_path}'")
+    print()
 
     print("Network:")
     print(pytorch_network)
@@ -205,11 +206,7 @@ def main(config):
     print("Training set shapes (X, y):", X_train.shape, y_train.shape)
     print("Validation set shapes (X, y):", X_valid.shape, y_valid.shape)
     print("Testing set shapes (X, y):", X_test.shape, y_test.shape)
-
-    clf = SVR()
-    clf.fit(X_train_valid, y_train_valid)
-    prediction = clf.predict(X_test)
-    print("MSE:", mean_squared_error(y_test, prediction))
+    print()
 
     train_dataset = TensorDataset(torch.from_numpy(X_train), torch.from_numpy(y_train))
     valid_dataset = TensorDataset(torch.from_numpy(X_valid), torch.from_numpy(y_valid))
