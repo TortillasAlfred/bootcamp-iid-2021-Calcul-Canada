@@ -252,9 +252,6 @@ if __name__ == "__main__":
     # On gère les emplacements de lecture comme des paramètres pour Calcul Canada
     parser.add_argument("--dataset_path", type=str, default="dataset/")
     parser.add_argument("--logging_path", type=str, default="logging/")
-    
-    # On passe un index de job qui va déterminer quelle config on veut lancer précisément
-    parser.add_argument("--job_index", type=int, default=-1)
 
     # Arguments par défaut dans le script original
     parser.add_argument("--random_seed", type=int, default=42)
@@ -266,6 +263,9 @@ if __name__ == "__main__":
     parser.add_argument("--test_size", type=float, default=0.2)
     parser.add_argument("--valid_size", type=float, default=0.25)
     parser.add_argument("--model", type=str, default="A")
+    
+    # On passe un index de job qui va déterminer quelle config on veut lancer précisément
+    parser.add_argument("--job_index", type=int, default=-1)
 
     args = parser.parse_args()
 
