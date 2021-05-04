@@ -6,7 +6,7 @@
 #SBATCH --time=0-00:30                                        # time (DD-HH:MM)
 #SBATCH --mail-user=mathieu.godbout.3@ulaval.ca               # Where to email
 #SBATCH --mail-type=FAIL                                      # Email when a job fails
-#SBATCH --output=/scratch/username/some/folder/%A_%a.out      # Default write output on scratch, to jobID_arrayID.out file
+#SBATCH --output=/scratch/magod/%A_%a.out                     # Default write output on scratch, to jobID_arrayID.out file
 #SBATCH --array=1-20                                          # Launch an array of 20 jobs
 
 # Activate the Python environment
