@@ -15,4 +15,4 @@ source /home/magod/venvs/CC_example/bin/activate
 # Launch the main script
 # You can access the array ID via $SLURM_ARRAY_TASK_ID
 # We use the -u option so that the output is written unbuffered to the output file.
-python -u main_script.py --dataset_path /project/def-adurand/magod/boston_dataset/ --logging_path /scratch/magod/CC_example --job_index $SLURM_ARRAY_TASK_ID
+python main_script.py --dataset_path /project/def-adurand/magod/boston_dataset/ --logging_path /scratch/magod/CC_example --job_index $SLURM_ARRAY_TASK_ID
