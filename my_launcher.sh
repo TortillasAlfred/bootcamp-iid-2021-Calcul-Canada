@@ -7,7 +7,7 @@
 #SBATCH --mail-user=mathieu.godbout.3@ulaval.ca               # Where to email
 #SBATCH --mail-type=FAIL                                      # Email when a job fails
 #SBATCH --output=/scratch/magod/%A_%a.out                     # Default write output on scratch, to jobID_arrayID.out file
-#SBATCH --array=1-20                                          # Launch an array of 20 jobs
+#SBATCH --array=0-19                                          # Launch an array of 20 jobs
 
 # Activate the Python environment
 source /home/magod/venvs/CC_example/bin/activate
